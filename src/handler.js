@@ -1,7 +1,5 @@
 // const { nanoid } = require('nanoid')
 // import { nanoid } from 'nanoid'
-import('nanoid').then(nanoid => {
-    const id = nanoid(16)  })
 // const nanoid = require('nanoid')
 const notes = require('./notes')
 const addNoteHandler = (request, h) => {
