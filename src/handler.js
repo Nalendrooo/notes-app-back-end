@@ -1,10 +1,16 @@
 // const { nanoid } = require('nanoid')
 // import { nanoid } from 'nanoid'
-const nanoid = require('nanoid')
+import('nanoid').then(nanoid => {
+    const id = nanoid(16)  })
+// const nanoid = require('nanoid')
 const notes = require('./notes')
 const addNoteHandler = (request, h) => {
     const { title, tags, body } = request.payload
-    const id = nanoid(16)
+    // const id = nanoid(16)
+    let id
+    import('nanoid').then(nanoid => {
+        id = nanoid.nanoid(16)
+    })
     const createdAt = new Date().toISOString()
     const updatedAt = createdAt
 
