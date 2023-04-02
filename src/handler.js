@@ -1,5 +1,5 @@
-// const { nanoid } = require('nanoid')
-import { nanoid } from 'nanoid'
+const { nanoid } = require('nanoid')
+// import { nanoid } from 'nanoid'
 const notes = require('./notes')
 const addNoteHandler = (request, h) => {
     const { title, tags, body } = request.payload
